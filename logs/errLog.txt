@@ -1,0 +1,15 @@
+20221205	19:06:01	f304c606-f4aa-48fa-9a44-e9621446ea58	Error: not allowed by CORS
+20221206	17:52:43	e06ac7a8-0bbe-44f9-8cf7-93dbd82e6ccf	ReferenceError: employee is not defined
+20221206	17:55:47	8c2d1f97-082d-436c-84e7-01d4bdddd64e	ReferenceError: employee is not defined
+20221206	18:41:52	d35c5ac8-43b2-4dd7-a7bb-26a223a4de09	ReferenceError: employee is not defined
+20221207	16:29:05	1a374eb1-9235-4432-9d4f-4d31efa11075	TypeError: res.senStatus is not a function
+20221207	16:30:36	36efb987-13b9-4d92-9ab6-7ba2ad75d127	TypeError: res.senStatus is not a function
+20221207	16:35:10	5f065406-3f9f-4ea4-85f2-8b7487cede14	Error: ENOENT: no such file or directory, stat 'C:\Users\ENG\OneDrive\Documents\LearnNode\views\index.html'
+20221208	16:46:12	3e03d5a8-96ca-42c2-98e9-c237721a9218	TypeError: res.senStatus is not a function
+20221208	16:46:19	e5871a05-ba8c-45d3-a991-aa63142b39e6	TypeError: res.senStatus is not a function
+20221210	12:08:38	8246e34c-470c-4b59-a075-cb8328fa201d	Error: not allowed by CORS
+20221210	12:08:39	fcf252f5-74df-4c51-9e84-28621cad6c88	Error: not allowed by CORS
+20221210	12:08:39	275b7227-d4dc-4409-bb6c-752dc13a9967	Error: not allowed by CORS
+20221210	12:08:39	22fbb568-9889-4548-9961-9804b662f37d	Error: not allowed by CORS
+20221210	12:11:28	eeac85b3-7623-43c4-a899-94f731bbafcb	Error: not allowed by CORS
+20221210	12:11:29	2f6dd717-11e8-4459-bbf0-c03a9d438807	Error: not allowed by CORS

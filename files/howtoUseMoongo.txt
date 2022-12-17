@@ -1,0 +1,45 @@
+Go to moongoDb.com and create a user account
+signUp for a free acount by clicking trFree button
+After login in...
+In the main navbar click projects to create a new project(click the leaf for the navbar to show)
+After clicking new project, name the projects
+After that it allows me to set permission for users it assigns that to your default account
+click build database, and try the free version for now
+and then it will say create a shared cluster, and click the region that default to you
+click create cluster, and name it
+click browse collections, After that click add my own database
+then  add the name of your database (Company db)
+collection name = employees, click create
+
+CREATING A DATABASE ACCESS
+in the main navbar click on database ACCESS
+click the button(add new database user)
+put the password of your choice,(name it, give the real password)
+keep the default option don't forget to check read and write to any database
+click adduser, then go to our cluster by clicking the name of your database 
+for the tutorial it was moongotuts
+
+wait for the changes to update and click the connect button
+check the allow acces from anywhere and click the add ip address
+click the choose a connection method, and choose "connection our application"
+this gives a connection string, copy the connection string
+i will have put in the password of our database in the connection string
+replace the myfirstdatabase with the name we gave to the database, note 
+do the above before copying the string
+
+what happens in visual studio
+go to our .env file and make a variable name DATABASE_URI = connection string
+note we gonna use the process.env method to pull this string when we to connect
+
+note 
+intall the mongoose package using (npm install mongoose)
+we going to most of the work in the server file
+
+// in the last part of the server we call afunction that do this
+
+// this function listen for connection events, and listen for any other events
+// that came in notice we the once method and it takes two params
+// one the event and a callback function that listens for teh extra events
+
+moongoDb schemas very important concepts
+data models

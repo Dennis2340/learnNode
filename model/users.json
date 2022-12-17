@@ -1,0 +1,55 @@
+[
+  {
+    "username": "Denno1000",
+    "roles": { "Users": 2001 },
+    "password": "$2b$10$su7XwDWzEaaHVndUfmeTn.oYA/ct2oB45M0ugbVaJzT3aJn0C.6fe",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impkc2tqZiIsImlhdCI6MTY3MDUyMzY1OCwiZXhwIjoxNjcwNjEwMDU4fQ.12eQ46NpzPzkYfrsGPMwRVGaT2TN-JkCnixXsQo8P5c"
+  },
+  {
+    "username": "denise200",
+    "roles": { "Users": 2001, "Editor": 1984 },
+    "password": "$2b$10$su7XwDWzEaaHVndUfmeTn.oYA/ct2oB45M0ugbVaJzT3aJn0C.6fe",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impkc2tqZiIsImlhdCI6MTY3MDU0NjQ2MCwiZXhwIjoxNjcwNjMyODYwfQ.jMsOnKu31QH8nB7-4yrQdFnYcURM8vqoDpogAwkDDCo"
+  },
+  {
+    "username": "bossz400",
+    "roles": { "Users": 2001, "Editor": 1984, "Admin": 5150 },
+    "password": "$2b$10$su7XwDWzEaaHVndUfmeTn.oYA/ct2oB45M0ugbVaJzT3aJn0C.6fe",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Impkc2tqZiIsImlhdCI6MTY3MDU0NjkwMiwiZXhwIjoxNjcwNjMzMzAyfQ.2TPCxemDH0Q4ypafKqPVIjlZRs6LTLYlDeXoq6bvBHc"
+  },
+  {
+    "username": "dennis",
+    "roles": { "User": 2001 },
+    "password": "$2b$10$dNqQCRKrXkwS0BIgCgxfjOM5vpdILgTzRkQqJXW53BugJvMFsY5k2"
+  },
+  {
+    "username": "dennis",
+    "roles": { "User": 2001 },
+    "password": "$2b$10$dNqQCRKrXkwS0BIgCgxfjOM5vpdILgTzRkQqJXW53BugJvMFsY5k2",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRlbm5pcyIsImlhdCI6MTY3MDcyMzQxNiwiZXhwIjoxNjcwODA5ODE2fQ.0hi9F-90_d744TjpfH4YmCpArIL4YINyEWsp3gwRH5c"
+  },
+  {
+    "username": "dennis",
+    "roles": { "User": 2001 },
+    "password": "$2b$10$dNqQCRKrXkwS0BIgCgxfjOM5vpdILgTzRkQqJXW53BugJvMFsY5k2",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRlbm5pcyIsImlhdCI6MTY3MDcyMzQ4OSwiZXhwIjoxNjcwODA5ODg5fQ.8pyVuYAzLowXg7sNfNaqv6D3JN4Q2Q1SpSYq3aqojL4"
+  },
+  {
+    "username": "dennis",
+    "roles": { "User": 2001 },
+    "password": "$2b$10$dNqQCRKrXkwS0BIgCgxfjOM5vpdILgTzRkQqJXW53BugJvMFsY5k2",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRlbm5pcyIsImlhdCI6MTY3MDcyMzUyMiwiZXhwIjoxNjcwODA5OTIyfQ.UJq8oj-6QyVHwt00fpOtr0Kf0RZCgNvNqG4PHtTxEJA"
+  },
+  {
+    "username": "dennis",
+    "roles": { "User": 2001 },
+    "password": "$2b$10$dNqQCRKrXkwS0BIgCgxfjOM5vpdILgTzRkQqJXW53BugJvMFsY5k2",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRlbm5pcyIsImlhdCI6MTY3MDcyMzYzNywiZXhwIjoxNjcwODEwMDM3fQ.9XLQBgypm0g_MfJ9ZdkdOwRfNR_DV1waQ14iYkiZIy4"
+  },
+  {
+    "username": "dennis",
+    "roles": { "User": 2001 },
+    "password": "$2b$10$dNqQCRKrXkwS0BIgCgxfjOM5vpdILgTzRkQqJXW53BugJvMFsY5k2",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImRlbm5pcyIsImlhdCI6MTY3MDcyMzcxMCwiZXhwIjoxNjcwODEwMTEwfQ.J3ZdAqNcuvW0m90QUofO5v1N-7crPzkpXFE7icGoMZo"
+  }
+]
