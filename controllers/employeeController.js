@@ -1,81 +1,97 @@
-const Employee = require("../model/Employee")
+const mongoose = require('mongoose');
+const Employee = require("../model/Employee");
 
+const getAllEmployees = async (req, res) => {
+    const employee = await Employee.find();
+    if (!employee || employee.length === 0) {
+        return res.status(204).json({"message": "No employees found!"});
+    }
+    res.json(employee);
+};
 
-const getAllEmployees = async (req,res) => {
+// create employee using id
+const createNewEmployee = async (req, res) => {
+    if (!req?.body?.firstname || !req?.body?.lastname) {
+        return res.status(400).json({"message": "First and Last name required"});
+    }
+    try {
+        const result = await Employee.create({
+            firstname: req.body.firstname,
+            lastname: req.body.lastname
+        });
+        res.status(201).json(result);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({"message": "Internal Server Error"});
+    }
+};
 
-    const employee = await Employee.find()
-    if(!employee) return res.sendStatus(204).json({"message" : "No employees found!"})
-    res.json(employee)
-   
- }
- // create employee using id
-const createNewEmployee = async (req,res) => {
-  
-    if(!req?.body?.firstname || !req?.body?.lastname) return res.sendStatus(400).json({"message" : "First and Last name required"})
-    try{
-       const result = await Employee.create({
-        firstname : req.body.firstname,
-        lastname : req.body.lastname
-    })
-    res.sendStatus(201).json(result)
-  }catch(error){
-    console.log(error);
-  }
-   
-}
- // update employee using id
-const updateEmployee = async (req,res) => {
- if(!req?.body?.id)
- {
-  return res.sendStatus(400).json({"message" : "ID parameter is required."})
- }
- const singleEmployee = await Employee.findOne({_id : req.body.id}).exec()
-  if(!singleEmployee)
-  {
-    return res.status(204).json({"message" : `No employee matches ${req.body.id}.`});
+// update employee using id
+const updateEmployee = async (req, res) => {
+    if (!req?.body?.id) {
+        return res.status(400).json({"message": "ID parameter is required."});
+    }
 
-  }
+    if (!mongoose.Types.ObjectId.isValid(req.body.id)) {
+        return res.status(400).json({"message": "Invalid employee ID."});
+    }
 
-  if(req.body?.firstname) singleEmployee.firstname = req.body.firstname;
-  if(req.body?.lastname) singleEmployee.lastname = req.body.lastname;
+    const result = await Employee.findByIdAndUpdate(
+        req.body.id,
+        {
+            firstname: req.body.firstname,
+            lastname: req.body.lastname
+        },
+        { new: true }
+    );
+    
+    if (!result) {
+        return res.status(404).json({"message": `No employee found with ID ${req.body.id}.`});
+    }
+    
+    res.json(result);
+};
 
-   const result = await singleEmplyee.save()
-   res.json(result) 
-}
-  // delete employee using id
- const deleteEmployee = async (req,res) => {
-  if(!req?.body?.id) return res.sendStatus(400).json({"message" : "Employee ID required"})
+// delete employee using id
+const deleteEmployee = async (req, res) => {
+    if (!req?.body?.id) {
+        return res.status(400).json({"message": "Employee ID required"});
+    }
 
-  const singleEmployee = await Employee.findOne({_id : req.body.id}).exec();
+    if (!mongoose.Types.ObjectId.isValid(req.body.id)) {
+        return res.status(400).json({"message": "Invalid employee ID."});
+    }
 
-  if(!singleEmployee)
-  {
-    return res.status(204).json({"message" : `No employee matches ${req.body.id}.`});
+    const singleEmployee = await Employee.findById(req.body.id);
+    if (!singleEmployee) {
+        return res.status(404).json({"message": `No employee found with ID ${req.body.id}.`});
+    }
 
-  }
- 
-  const result = await singleEmployee.deleteOne({_id: req.body.id});
-  res.json(result)
+    const result = await singleEmployee.deleteOne();
+    res.json(result);
+};
 
-}
+const getEmployee = async (req, res) => {
+    if (!req?.params?.id) {
+        return res.status(400).json({"message": "Employee ID required"});
+    }
 
-const getEmployee = async (req,res) => {
-  if(!req?.params?.id) return res.sendStatus(400).json({"message" : "Employee ID required"})
-  const singleEmployee =  await Employee.findOne({_id : req.params.id}).exec()
+    if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+        return res.status(400).json({"message": "Invalid employee ID."});
+    }
 
-  if(!singleEmployee)
-  {
-    return res.status(204).json({"message" : `No employee matches ${req.params.id}.`});
+    const singleEmployee = await Employee.findById(req.params.id);
+    if (!singleEmployee) {
+        return res.status(404).json({"message": `Employee with ID ${req.params.id} not found.`});
+    }
 
-  }
-   res.json(singleEmployee);
+    res.json(singleEmployee);
+};
 
- }
-
- module.exports = {
-  getAllEmployees, 
-  createNewEmployee,
-  updateEmployee,
-  deleteEmployee,
-  getEmployee
+module.exports = {
+    getAllEmployees,
+    createNewEmployee,
+    updateEmployee,
+    deleteEmployee,
+    getEmployee
 };
